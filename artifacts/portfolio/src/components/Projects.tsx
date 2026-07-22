@@ -21,7 +21,8 @@ const PROJECTS = [
     description: "Transformed 4,337 humanitarian incident reports (1997–2025, 75+ countries) into a tactical intelligence brief on attacks against aid workers — surfacing systemic risk disparities and behavioral threat patterns, and culminating in a machine-learning prototype for real-time risk scoring.",
     tags: ["Python", "Scikit-learn", "Plotly", "Quarto", "Geospatial"],
     image: "/img/cover-fatal-compassion.svg",
-    status: "Complete"
+    status: "Live",
+    url: "https://jl3205-dataviz-scholarship-2025.github.io/fatal-compassion/"
   },
   {
     id: 3,

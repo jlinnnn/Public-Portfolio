@@ -92,6 +92,7 @@ const en = {
   interests: {
     badge: 'Beyond the resume',
     heading: 'Because humans are more than their GitHub graphs.',
+    readingLabel: 'Recent Reads — The New Yorker',
     items: [
       { title: 'Streetwear Design', desc: 'Exploring the intersection of geometry, algorithms, and fabric.' },
       { title: 'Indie Games', desc: 'Crafting small, intentional experiences with mechanics that feel good.' },
@@ -187,6 +188,7 @@ const zh: Dict = {
   interests: {
     badge: '简历之外',
     heading: '因为人不只是他们的 GitHub 提交图。',
+    readingLabel: '近期阅读 —《纽约客》',
     items: [
       { title: '街头潮流设计', desc: '探索几何、算法与布料之间的交汇点。' },
       { title: '独立游戏', desc: '打造小而用心、手感出色的游戏体验。' },
@@ -280,6 +282,7 @@ const es: Dict = {
   interests: {
     badge: 'Más allá del CV',
     heading: 'Porque las personas son más que sus gráficos de GitHub.',
+    readingLabel: 'Lecturas Recientes — The New Yorker',
     items: [
       { title: 'Diseño de Ropa Urbana', desc: 'Explorar la intersección entre geometría, algoritmos y tela.' },
       { title: 'Juegos Independientes', desc: 'Crear experiencias pequeñas e intencionadas con mecánicas que se sienten bien.' },
@@ -373,6 +376,7 @@ const fr: Dict = {
   interests: {
     badge: 'Au-delà du CV',
     heading: 'Parce qu\'un être humain vaut plus que ses contributions GitHub.',
+    readingLabel: 'Lectures Récentes — The New Yorker',
     items: [
       { title: 'Design Streetwear', desc: 'Explorer l\'intersection entre géométrie, algorithmes et tissu.' },
       { title: 'Jeux Indépendants', desc: 'Concevoir de petites expériences intentionnelles aux mécaniques agréables.' },
@@ -466,6 +470,7 @@ const ar: Dict = {
   interests: {
     badge: 'ما وراء السيرة الذاتية',
     heading: 'لأنّ البشر أكثر من مجرّد رسوم مساهماتهم على GitHub.',
+    readingLabel: 'قراءات حديثة — The New Yorker',
     items: [
       { title: 'تصميم أزياء الشارع', desc: 'استكشاف التقاطع بين الهندسة والخوارزميات والأقمشة.' },
       { title: 'الألعاب المستقلة', desc: 'صناعة تجارب صغيرة مدروسة بآليات ممتعة الإحساس.' },
