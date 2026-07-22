@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  
+  <defs>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(11,90%,55%)" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="hsl(11,90%,55%)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="675" fill="#0a0a0a"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <rect x="28" y="28" width="1144" height="619" fill="none" stroke="#333333" stroke-width="1"/>
+  <line x1="28" y1="92" x2="1172" y2="92" stroke="#333333" stroke-width="1"/>
+  <line x1="28" y1="611" x2="1172" y2="611" stroke="#333333" stroke-width="1"/>
+  <text x="52" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="hsl(11,90%,55%)">06</text>
+  <text x="92" y="71" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="4" fill="#8a8a8a">// AI · HEALTH</text>
+  <text x="52" y="641" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="3" fill="#f5f5f5">BETTERYOU</text>
+  <text x="1148" y="641" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#8a8a8a">JL // 2024</text>
+  
+    <path d="M 180,380 L 220,380 L 250,380 L 265,310 L 280,430 L 300,380 L 340,380 L 370,380 L 385,290 L 400,440 L 420,380 L 480,380 L 510,380 L 525,310 L 540,430 L 560,380 L 620,380 " fill="none" stroke="hsl(11,90%,55%)" stroke-width="2.5" stroke-linejoin="round"/>
+    <line x1="180" y1="380" x2="700" y2="380" stroke="#333333" stroke-width="1" stroke-dasharray="3 5"/>
+    <rect x="720" y="430" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="720" y="470" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="720" y="510" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="764" y="430" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="764" y="470" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="764" y="510" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="808" y="430" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="808" y="470" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="808" y="510" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="852" y="430" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="852" y="470" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="852" y="510" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="896" y="430" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="896" y="470" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="896" y="510" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="940" y="430" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="940" y="470" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="940" y="510" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="984" y="430" width="34" height="30" fill="hsl(11,90%,55%)" stroke="#4d4d4d" opacity="0.85"/><rect x="984" y="470" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/><rect x="984" y="510" width="34" height="30" fill="#121212" stroke="#4d4d4d" opacity="1"/>
+    <text x="720" y="415" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#8a8a8a">WEEKLY PLAN</text>
+    <circle cx="300" cy="220" r="26" fill="none" stroke="hsl(11,90%,55%)" stroke-width="2"/>
+    <text x="300" y="227" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#f5f5f5">+PTS</text>
+    <text x="200" y="500" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#8a8a8a">LLaMA 3.1 · REWARD ENGINE</text>
+</svg>

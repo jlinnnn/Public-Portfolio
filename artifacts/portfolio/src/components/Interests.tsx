@@ -40,7 +40,7 @@ export default function Interests() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="font-mono text-sm tracking-widest text-primary uppercase">05 //</span>
+            <span className="font-mono text-sm tracking-widest text-primary uppercase">06 //</span>
             <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Beyond the resume</h3>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-foreground font-bold max-w-2xl">

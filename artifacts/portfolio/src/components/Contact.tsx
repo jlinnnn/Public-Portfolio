@@ -16,7 +16,7 @@ export default function Contact() {
           className="flex-1"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="font-mono text-sm tracking-widest text-primary uppercase">06 //</span>
+            <span className="font-mono text-sm tracking-widest text-primary uppercase">07 //</span>
             <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Connect</h3>
           </div>
           <h2 className="text-5xl md:text-7xl font-serif text-foreground font-bold leading-tight mb-8">

@@ -1,5 +1,9 @@
 # See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+# Local project source archive (reference only — not part of the deployed site,
+# and contains third-party PDFs/datasets not meant for public redistribution)
+Projects/
+
 # compiled output
 dist
 tmp

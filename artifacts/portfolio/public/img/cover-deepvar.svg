@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  
+  <defs>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(11,90%,55%)" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="hsl(11,90%,55%)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="675" fill="#0a0a0a"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <rect x="28" y="28" width="1144" height="619" fill="none" stroke="#333333" stroke-width="1"/>
+  <line x1="28" y1="92" x2="1172" y2="92" stroke="#333333" stroke-width="1"/>
+  <line x1="28" y1="611" x2="1172" y2="611" stroke="#333333" stroke-width="1"/>
+  <text x="52" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="hsl(11,90%,55%)">01</text>
+  <text x="92" y="71" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="4" fill="#8a8a8a">// RISK MODELING</text>
+  <text x="52" y="641" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="3" fill="#f5f5f5">DEEPVAR</text>
+  <text x="1148" y="641" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#8a8a8a">JL // 2025</text>
+  
+    <path d="M 250,360 L 1060,140 L 1060,600 Z" fill="url(#fade)" opacity="0.5"/>
+    <path d="M 250,360 L 1060,420 L 1060,600 Z" fill="hsl(11,90%,55%)" opacity="0.14"/>
+    <polyline points="250,360 270,361.83540430883363 290,362.7317678784632 310,361.9799598928324 330,359.27437941460545 350,354.78777715283167 370,349.1289600644789 390,343.19373417848306 410,337.94558003753656 430,334.1797590586792 450,332.3286058026949 470,332.3556773954369 490,333.76467601440856 510,335.7209599047025 530,337.2558927897503 550,337.5039998141979 570,335.91486597298706 590,332.3878969009879 610,327.29694788193405 630,321.3987910363055 650,315.64783111288506 670,310.96243392022666 690,308.00007834759435 710,306.9963826024926 730,307.7074166559965 750,309.4694248211904 770,311.3613362946131 790,312.430275412413 810,311.92485884555896 830,309.4791604441975 850,305.20230272125696 870,299.6517398555024 890,293.6967734666795 910,288.305717261047 930,284.3088200649635 950,282.19499195625474 970,281.99210202582657 990,283.2601550522431 1010,285.19901767730363 1030,286.8443189577568 1050,287.30356200582105 " fill="none" stroke="#f5f5f5" stroke-width="2.5"/>
+    <line x1="1060" y1="140" x2="1060" y2="600" stroke="#4d4d4d" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="250" y1="360" x2="1060" y2="510" stroke="hsl(11,90%,55%)" stroke-width="2"/>
+    <text x="1000" y="500" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="hsl(11,90%,55%)">95% VaR</text>
+    <text x="1000" y="180" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#8a8a8a">P90</text>
+    <circle cx="250" cy="360" r="5" fill="#f5f5f5"/>
+</svg>

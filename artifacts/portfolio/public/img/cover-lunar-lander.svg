@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  
+  <defs>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(11,90%,55%)" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="hsl(11,90%,55%)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="675" fill="#0a0a0a"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <rect x="28" y="28" width="1144" height="619" fill="none" stroke="#333333" stroke-width="1"/>
+  <line x1="28" y1="92" x2="1172" y2="92" stroke="#333333" stroke-width="1"/>
+  <line x1="28" y1="611" x2="1172" y2="611" stroke="#333333" stroke-width="1"/>
+  <text x="52" y="72" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="hsl(11,90%,55%)">09</text>
+  <text x="92" y="71" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="4" fill="#8a8a8a">// REINFORCEMENT LEARNING</text>
+  <text x="52" y="641" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="3" fill="#f5f5f5">LUNAR LANDER</text>
+  <text x="1148" y="641" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#8a8a8a">JL // 2024</text>
+  
+    <path d="M 150,560 L 300,520 L 430,545 L 520,500 L 640,510 L 760,470 L 900,500 L 1050,540" fill="none" stroke="#4d4d4d" stroke-width="1.5"/>
+    <path d="M 150,560 L 300,520 L 430,545 L 520,500 L 640,510 L 760,470 L 900,500 L 1050,540 L 1050,600 L 150,600 Z" fill="#141414"/>
+    <line x1="500" y1="497" x2="500" y2="470" stroke="hsl(11,90%,55%)" stroke-width="1.5"/><path d="M 500,470 L 522,477 L 500,484 Z" fill="hsl(11,90%,55%)"/>
+    <line x1="560" y1="500" x2="560" y2="473" stroke="hsl(11,90%,55%)" stroke-width="1.5"/><path d="M 560,473 L 582,480 L 560,487 Z" fill="hsl(11,90%,55%)"/>
+    <g transform="translate(360,250)">
+      <polygon points="0,-18 16,-6 16,10 -16,10 -16,-6" fill="#121212" stroke="#f5f5f5" stroke-width="2"/>
+      <line x1="-16" y1="10" x2="-24" y2="26" stroke="#f5f5f5" stroke-width="2"/><line x1="16" y1="10" x2="24" y2="26" stroke="#f5f5f5" stroke-width="2"/>
+      <polygon points="-6,10 6,10 0,34" fill="hsl(11,90%,55%)"/>
+    </g>
+    <line x1="360" y1="284" x2="530" y2="460" stroke="hsl(11,90%,55%)" stroke-width="1" stroke-dasharray="4 5"/>
+    <path d="M 720,520 L 720,517 L 731,513 L 742,511 L 753,512 L 764,513 L 775,511 L 786,503 L 797,494 L 808,485 L 819,478 L 830,471 L 841,461 L 852,447 L 863,431 L 874,417 L 885,408 L 896,402 L 907,398 L 918,391 L 929,383 L 940,376 L 951,374 L 962,375 L 973,377 L 984,376 L 995,372 L 1006,368 L 1017,367 L 1028,370 L 1039,373 L 1050,374 " fill="none" stroke="#f5f5f5" stroke-width="2"/>
+    <line x1="720" y1="370" x2="1050" y2="370" stroke="#333333" stroke-width="1" stroke-dasharray="3 5"/>
+    <text x="1040" y="362" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="hsl(11,90%,55%)">+200 SOLVED</text>
+    <text x="360" y="180" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#8a8a8a">DQN · 534 EPISODES</text>
+</svg>

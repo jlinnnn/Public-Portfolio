@@ -44,7 +44,7 @@ export default function Experience() {
           className="mb-20"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="font-mono text-sm tracking-widest text-primary uppercase">05 //</span>
+            <span className="font-mono text-sm tracking-widest text-primary uppercase">04 //</span>
             <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Work History</h3>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-foreground font-bold">
