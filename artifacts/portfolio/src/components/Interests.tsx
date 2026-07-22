@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion';
-import { Shirt, Gamepad2, Dumbbell, ChefHat, Target } from 'lucide-react';
+import { Shirt, Gamepad2, Dumbbell, ChefHat, Target, Newspaper, ArrowUpRight } from 'lucide-react';
 
-const INTERESTS = [
+type Interest = {
+  title: string;
+  icon: React.ReactNode;
+  desc: string;
+  url?: string;
+};
+
+const INTERESTS: Interest[] = [
   {
     title: "Streetwear Design",
     icon: <Shirt className="w-6 h-6" />,
@@ -15,7 +22,8 @@ const INTERESTS = [
   {
     title: "Chess",
     icon: <Target className="w-6 h-6" />,
-    desc: "Practicing calculated aggression and tactical foresight."
+    desc: "Practicing calculated aggression and tactical foresight.",
+    url: "https://www.chess.com/member/jlinnnn"
   },
   {
     title: "The Gym",
@@ -26,6 +34,11 @@ const INTERESTS = [
     title: "Cooking",
     icon: <ChefHat className="w-6 h-6" />,
     desc: "Finding the exact ratios that make flavors work."
+  },
+  {
+    title: "Longform Reading",
+    icon: <Newspaper className="w-6 h-6" />,
+    desc: "Long, unhurried reads — mostly The New Yorker — on culture, politics, and the people behind the headlines."
   }
 ];
 
@@ -33,7 +46,7 @@ export default function Interests() {
   return (
     <section id="interests" className="py-32 px-6 md:px-12 bg-background border-t border-border overflow-hidden">
       <div className="container mx-auto max-w-6xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -49,28 +62,45 @@ export default function Interests() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {INTERESTS.map((item, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="p-8 border border-border bg-secondary/20 hover:bg-secondary/40 transition-colors group flex flex-col gap-6"
-            >
-              <div className="w-12 h-12 flex items-center justify-center bg-background border border-border text-primary group-hover:scale-110 transition-transform">
-                {item.icon}
-              </div>
-              <div>
-                <h4 className="text-xl font-serif font-bold text-foreground mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-muted-foreground font-sans text-sm leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+          {INTERESTS.map((item, idx) => {
+            const cardClass = "relative p-8 border border-border bg-secondary/20 hover:bg-secondary/40 transition-colors group flex flex-col gap-6";
+            const inner = (
+              <>
+                {item.url && (
+                  <ArrowUpRight className="absolute top-6 right-6 w-4 h-4 text-muted-foreground opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                )}
+                <div className="w-12 h-12 flex items-center justify-center bg-background border border-border text-primary group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <div>
+                  <h4 className="text-xl font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-muted-foreground font-sans text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </>
+            );
+
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" className={`${cardClass} cursor-pointer`}>
+                    {inner}
+                  </a>
+                ) : (
+                  <div className={cardClass}>{inner}</div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

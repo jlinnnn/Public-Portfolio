@@ -194,7 +194,7 @@ export default function Experience() {
         >
           <h4 className="font-mono text-xs uppercase tracking-widest text-primary mb-6">Community</h4>
           <div className="flex flex-wrap gap-4">
-            {["Martha's Table Volunteer", "R Gov Volunteer", "NYC Half-Marathon Volunteer"].map((item) => (
+            {["Martha's Table Volunteer", "R Gov Volunteer", "NYC Half-Marathon Volunteer", "St Catherine's Nursing Home"].map((item) => (
               <span key={item} className="font-mono text-sm text-foreground/70 border border-border px-4 py-2">
                 {item}
               </span>

@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+
+const RESUME_URL = `${import.meta.env.BASE_URL}Joshua-Lin-Resume.pdf`.replace(/\/\//g, '/');
 
 export default function Contact() {
   return (
@@ -74,6 +76,21 @@ export default function Contact() {
               <div className="flex flex-col">
                 <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">GitHub</span>
                 <span className="font-sans font-medium text-foreground">@jlinnnn</span>
+              </div>
+            </div>
+            <ArrowRight className="w-5 h-5 text-primary opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+          </a>
+
+          <a
+            href={RESUME_URL}
+            download
+            className="group flex items-center justify-between p-6 border border-primary/40 bg-primary/5 hover:border-primary transition-colors"
+          >
+            <div className="flex items-center gap-4">
+              <Download className="w-5 h-5 text-primary transition-colors" />
+              <div className="flex flex-col">
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Résumé</span>
+                <span className="font-sans font-medium text-foreground">Download PDF</span>
               </div>
             </div>
             <ArrowRight className="w-5 h-5 text-primary opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />

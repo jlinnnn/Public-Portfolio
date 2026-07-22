@@ -19,6 +19,7 @@ const TIMELINE: Education[] = [
     highlights: [
       "GPA: 3.933 | Returning Student Scholarship Recipient",
       "Teaching Assistant — DSAN Summer Bootcamp & Probabilistic Modeling",
+      "Teaching Assistant - DSAN 5100 Prob Modeling/Stat Computing",
       "DSAN Graduate Peer Mentor",
     ],
     coursework: "Neural Networks & Deep Learning, Applied Time Series, Big Data & Cloud Computing, Data Visualization, Statistical Computing"
@@ -40,6 +41,7 @@ const TIMELINE: Education[] = [
     highlights: [
       "GPA: 3.85 / 4.0 — Honor & High Honor Roll",
       "NYSSMA Level 6 — All-County Ensemble",
+      "All-County 1600M, Track & Field — Section XI",
     ],
   }
 ];
