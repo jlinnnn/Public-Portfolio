@@ -53,7 +53,7 @@ export default function About() {
                 Curious about how AI, robotics, and space can make humanity's future more promising. I approach problems with the rigor of a mathematician and the pragmatism of an engineer.
               </p>
               <p>
-                Outside of work I'm an aspiring streetwear designer and indie game developer. In my free time you'll find me at the gym, in the kitchen, over a chessboard, or catching up with friends.
+                Outside of work I'm an aspiring streetwear designer and indie game developer. In my free time you'll find me at the gym, in the kitchen, over a chessboard, or catching up with friends through the city.
               </p>
             </div>
 

@@ -2,28 +2,32 @@ import { motion } from 'framer-motion';
 
 const SKILL_CATEGORIES = [
   {
-    title: "Analysis & Reporting",
-    skills: ["SQL", "Python (Pandas, NumPy)", "Excel", "Data Wrangling", "KPI Definition", "Data Validation", "Relational Databases"]
+    title: "Languages & Frameworks",
+    skills: ["Python (Pandas, NumPy)", "R (tidyverse, ggplot2)", "SQL", "JavaScript", "React", "Flask"]
   },
   {
-    title: "Visualization & BI",
-    skills: ["Tableau", "Streamlit", "Plotly", "Matplotlib", "Seaborn", "Quarto", "Dashboard Design"]
+    title: "Machine Learning",
+    skills: ["Scikit-learn", "Classification (Naive Bayes, Random Forest)", "Clustering (K-Means, RFM)", "Recommendation Systems", "Regression", "Predictive Modeling"]
   },
   {
-    title: "Statistical Methods",
-    skills: ["Statistical Inference", "Hypothesis Testing", "Regression", "A/B Testing", "Time Series Analysis", "Predictive Modeling"]
+    title: "Deep Learning & AI",
+    skills: ["TensorFlow / Keras", "Reinforcement Learning (DQN)", "Probabilistic Forecasting (DeepAR, GluonTS)", "LLMs (LLaMA 3.1, Ollama)", "Prompt Engineering"]
   },
   {
-    title: "Advanced Analytics",
-    skills: ["Machine Learning (Supervised & Unsupervised)", "Deep Learning", "Clustering", "Geospatial Analysis", "NLP"]
+    title: "NLP & Statistics",
+    skills: ["NLP", "Sentiment & Bias Analysis", "Time Series (Prophet)", "Hypothesis Testing", "Statistical Inference", "Geospatial Analysis"]
   },
   {
-    title: "Programming",
-    skills: ["Python", "R (tidyverse, ggplot2)", "SQL", "JavaScript", "HTML/CSS", "Git / GitHub"]
+    title: "Data & Infrastructure",
+    skills: ["MySQL", "MongoDB", "AWS", "REST APIs", "Data Wrangling", "Data Validation"]
   },
   {
-    title: "Other",
-    skills: ["Google Data Analytics (Certified)", "Mandarin (Fluent)", "Spanish (Beginner)", "Big Data & Cloud Computing"]
+    title: "Visualization & Workflow",
+    skills: ["Plotly", "Matplotlib / Seaborn", "Streamlit", "Quarto", "Selenium", "Git / GitHub"]
+  },
+  {
+    title: "Foundations & Languages",
+    skills: ["Google Data Analytics (Certified)", "Mandarin (Fluent)", "Spanish (Beginner)"]
   }
 ];
 
