@@ -1,6 +1,16 @@
 import { motion } from 'framer-motion';
 
-const TIMELINE = [
+type Education = {
+  school: string;
+  location: string;
+  degree: string;
+  minor?: string;
+  period: string;
+  highlights: string[];
+  coursework?: string;
+};
+
+const TIMELINE: Education[] = [
   {
     school: "Georgetown University",
     location: "Washington, DC",
@@ -21,6 +31,16 @@ const TIMELINE = [
     period: "Aug 2019 – May 2023",
     highlights: [],
     coursework: "Probability, Combinatorics, Discrete Mathematics, Real Analysis, Data Structures"
+  },
+  {
+    school: "The Stony Brook School",
+    location: "Stony Brook, NY",
+    degree: "High School Diploma",
+    period: "Aug 2015 – May 2019",
+    highlights: [
+      "GPA: 3.85 / 4.0 — Honor & High Honor Roll",
+      "NYSSMA Level 6 — All-County Ensemble",
+    ],
   }
 ];
 
@@ -87,10 +107,12 @@ export default function Education() {
                         ))}
                       </ul>
                     )}
-                    <p className="text-xs text-foreground/50 font-mono mt-4 leading-relaxed">
-                      <span className="text-primary/70 uppercase tracking-widest text-[10px]">Coursework: </span>
-                      {item.coursework}
-                    </p>
+                    {item.coursework && (
+                      <p className="text-xs text-foreground/50 font-mono mt-4 leading-relaxed">
+                        <span className="text-primary/70 uppercase tracking-widest text-[10px]">Coursework: </span>
+                        {item.coursework}
+                      </p>
+                    )}
                   </div>
                 </div>
 
