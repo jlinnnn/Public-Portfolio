@@ -9,7 +9,7 @@ const PROJECTS = [
     date: "Apr 2025",
     description: "Interactive Streamlit app that estimates a stock portfolio's 10-day Value at Risk using DeepAR, a deep-learning probabilistic forecaster (GluonTS). Pulls ~95 NASDAQ-100 tickers, runs Monte Carlo return scenarios, and reports 95% / 99% VaR, PnL, rolling volatility, and asset correlations — each with plain-language explanations.",
     tags: ["Python", "Streamlit", "GluonTS", "DeepAR", "Pandas", "Plotly"],
-    image: "/img/cover-deepvar.svg",
+    image: "/img/deepvar-demo.gif",
     status: "Featured",
     url: "https://github.com/jlinnnn/deepvar-portfolio-risk"
   },
