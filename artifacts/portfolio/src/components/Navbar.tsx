@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Download } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, Sun, Moon, Download, Globe, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import { useLang, LANGS } from '../i18n';
 
-const NAV_LINKS = [
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Education', href: '#education' },
-  { name: 'Interests', href: '#interests' },
-  { name: 'Contact', href: '#contact' },
-];
+const NAV_ITEMS = [
+  { key: 'about', href: '#about' },
+  { key: 'skills', href: '#skills' },
+  { key: 'projects', href: '#projects' },
+  { key: 'experience', href: '#experience' },
+  { key: 'education', href: '#education' },
+  { key: 'interests', href: '#interests' },
+  { key: 'contact', href: '#contact' },
+] as const;
 
 const RESUME_URL = `${import.meta.env.BASE_URL}Joshua-Lin-Resume.pdf`.replace(/\/\//g, '/');
 
@@ -35,14 +36,66 @@ function ThemeToggle() {
   );
 }
 
+function LangSwitcher() {
+  const { lang, setLang } = useLang();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const current = LANGS.find((l) => l.code === lang)!;
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, []);
+
+  return (
+    <div className="relative" ref={ref}>
+      <button
+        type="button"
+        aria-label="Change language"
+        onClick={() => setOpen((o) => !o)}
+        className="h-9 px-2.5 flex items-center gap-1.5 border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+      >
+        <Globe className="w-4 h-4" />
+        <span className="font-mono text-xs uppercase tracking-widest">{current.label}</span>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.15 }}
+            className="absolute end-0 mt-2 min-w-[160px] bg-background border border-border shadow-lg z-50 py-1"
+          >
+            {LANGS.map((l) => (
+              <li key={l.code}>
+                <button
+                  type="button"
+                  onClick={() => { setLang(l.code); setOpen(false); }}
+                  className={`w-full flex items-center justify-between gap-3 px-4 py-2 text-sm font-sans hover:bg-secondary transition-colors ${l.code === lang ? 'text-primary' : 'text-foreground'}`}
+                >
+                  <span>{l.name}</span>
+                  {l.code === lang && <Check className="w-4 h-4" />}
+                </button>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function Navbar() {
+  const { t } = useLang();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -50,9 +103,7 @@ export default function Navbar() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
   };
 
@@ -75,35 +126,37 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             <nav className="flex items-center gap-8">
-              {NAV_LINKS.map((link) => (
+              {NAV_ITEMS.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.key}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
                   className="text-sm font-mono uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors relative group"
                 >
-                  {link.name}
+                  {t.nav[link.key]}
                   <span className="absolute -bottom-2 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
             </nav>
-            <div className="flex items-center gap-4 pl-6 border-l border-border">
+            <div className="flex items-center gap-3 ps-6 border-s border-border">
               <a
                 href={RESUME_URL}
                 download
                 className="flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
               >
                 <Download className="w-4 h-4" />
-                Résumé
+                {t.nav.resume}
               </a>
+              <LangSwitcher />
               <ThemeToggle />
             </div>
           </div>
 
           {/* Mobile controls */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2">
+            <LangSwitcher />
             <ThemeToggle />
             <button
               className="text-foreground p-2"
@@ -126,30 +179,30 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
           >
-            {NAV_LINKS.map((link, i) => (
+            {NAV_ITEMS.map((link, i) => (
               <motion.a
-                key={link.name}
+                key={link.key}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.08 }}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
                 className="text-3xl font-serif text-foreground hover:text-primary transition-colors"
               >
-                {link.name}
+                {t.nav[link.key]}
               </motion.a>
             ))}
             <motion.a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: NAV_LINKS.length * 0.1 }}
+              transition={{ delay: NAV_ITEMS.length * 0.08 }}
               href={RESUME_URL}
               download
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 flex items-center gap-3 text-lg font-mono uppercase tracking-widest text-primary"
             >
               <Download className="w-5 h-5" />
-              Download Résumé
+              {t.nav.resume}
             </motion.a>
           </motion.div>
         )}

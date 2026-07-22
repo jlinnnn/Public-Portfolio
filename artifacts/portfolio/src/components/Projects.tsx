@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { useLang } from '../i18n';
 
 const PROJECTS = [
   {
@@ -106,7 +107,9 @@ const statusColor: Record<string, string> = {
 };
 
 export default function Projects() {
+  const { t } = useLang();
   const [featured, ...rest] = PROJECTS;
+  const tp = t.projects;
 
   return (
     <section id="projects" className="py-32 px-6 md:px-12 bg-secondary/20">
@@ -120,14 +123,14 @@ export default function Projects() {
           <div>
             <div className="flex items-center gap-4 mb-4">
               <span className="font-mono text-sm tracking-widest text-primary uppercase">03 //</span>
-              <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Selected Work</h3>
+              <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">{tp.badge}</h3>
             </div>
             <h2 className="text-4xl md:text-5xl font-serif text-foreground font-bold">
-              Recent Projects
+              {tp.heading}
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground font-sans">
-            A selection of work across risk modeling, deep learning, NLP, analytics engineering, and AI systems.
+            {tp.intro}
           </p>
         </motion.div>
 
@@ -148,12 +151,12 @@ export default function Projects() {
             <div className="absolute inset-0 bg-background/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
             <img
               src={featured.image}
-              alt={featured.title}
+              alt={tp.items[featured.id].title}
               className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
             <div className="absolute top-4 right-4 z-20 flex items-center gap-2 bg-background/90 backdrop-blur px-3 py-1.5 border border-border">
               <span className={`w-2 h-2 rounded-full ${statusColor[featured.status] ?? 'bg-primary'}`}></span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-foreground">{featured.status}</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-foreground">{tp.statuses[featured.status] ?? featured.status}</span>
             </div>
             <div className="absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-background/90 backdrop-blur border border-border flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <ArrowUpRight className="w-4 h-4 text-primary" />
@@ -165,10 +168,10 @@ export default function Projects() {
                 <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">{featured.date}</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3">
-                {featured.title}
+                {tp.items[featured.id].title}
               </h3>
               <p className="text-muted-foreground font-sans mb-4 max-w-2xl">
-                {featured.description}
+                {tp.items[featured.id].description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {featured.tags.map(tag => (
@@ -211,12 +214,12 @@ export default function Projects() {
                     <div className="absolute inset-0 bg-background/20 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={tp.items[project.id].title}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     <div className="absolute top-4 right-4 z-20 flex items-center gap-2 bg-background/90 backdrop-blur px-3 py-1.5 border border-border">
                       <span className={`w-2 h-2 rounded-full ${statusColor[project.status] ?? 'bg-primary'}`}></span>
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-foreground">{project.status}</span>
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-foreground">{tp.statuses[project.status] ?? project.status}</span>
                     </div>
                     {(project as any).url && (
                       <div className="absolute bottom-4 right-4 z-20 w-9 h-9 rounded-full bg-background/90 backdrop-blur border border-border flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -228,10 +231,10 @@ export default function Projects() {
                     <div className="flex-1">
                       <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest block mb-2">{project.date}</span>
                       <h3 className="text-xl font-serif font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                        {project.title}
+                        {tp.items[project.id].title}
                       </h3>
                       <p className="text-muted-foreground font-sans text-sm mb-4">
-                        {project.description}
+                        {tp.items[project.id].description}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map(tag => (

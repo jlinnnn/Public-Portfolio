@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { useLang } from '../i18n';
 
 const RESUME_URL = `${import.meta.env.BASE_URL}Joshua-Lin-Resume.pdf`.replace(/\/\//g, '/');
 
 export default function Contact() {
+  const { t } = useLang();
   return (
     <section id="contact" className="py-32 px-6 md:px-12 border-t border-border bg-secondary/10 relative overflow-hidden">
       {/* Background decoration */}
@@ -19,13 +21,13 @@ export default function Contact() {
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="font-mono text-sm tracking-widest text-primary uppercase">07 //</span>
-            <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Connect</h3>
+            <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">{t.contact.badge}</h3>
           </div>
           <h2 className="text-5xl md:text-7xl font-serif text-foreground font-bold leading-tight mb-8">
-            Let's build <br/><span className="text-primary italic">something.</span>
+            {t.contact.heading1} <br/><span className="text-primary italic">{t.contact.heading2}</span>
           </h2>
           <p className="text-lg text-muted-foreground font-sans max-w-md">
-            Whether it's a data challenge, a software product, or talking about the latest in streetwear — my inbox is open.
+            {t.contact.para}
           </p>
         </motion.div>
 
@@ -42,7 +44,7 @@ export default function Contact() {
             <div className="flex items-center gap-4">
               <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               <div className="flex flex-col">
-                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Email</span>
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">{t.contact.emailLabel}</span>
                 <span className="font-sans font-medium text-foreground">jl3205@georgetown.edu</span>
               </div>
             </div>
@@ -58,7 +60,7 @@ export default function Contact() {
             <div className="flex items-center gap-4">
               <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               <div className="flex flex-col">
-                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">LinkedIn</span>
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">{t.contact.linkedinLabel}</span>
                 <span className="font-sans font-medium text-foreground">/in/jlinnnn</span>
               </div>
             </div>
@@ -74,7 +76,7 @@ export default function Contact() {
             <div className="flex items-center gap-4">
               <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               <div className="flex flex-col">
-                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">GitHub</span>
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">{t.contact.githubLabel}</span>
                 <span className="font-sans font-medium text-foreground">@jlinnnn</span>
               </div>
             </div>
@@ -89,8 +91,8 @@ export default function Contact() {
             <div className="flex items-center gap-4">
               <Download className="w-5 h-5 text-primary transition-colors" />
               <div className="flex flex-col">
-                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Résumé</span>
-                <span className="font-sans font-medium text-foreground">Download PDF</span>
+                <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">{t.contact.resumeLabel}</span>
+                <span className="font-sans font-medium text-foreground">{t.contact.resumeValue}</span>
               </div>
             </div>
             <ArrowRight className="w-5 h-5 text-primary opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
@@ -102,10 +104,10 @@ export default function Contact() {
       {/* Footer */}
       <div className="mt-32 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 container mx-auto max-w-5xl text-center md:text-left">
         <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
-          © {new Date().getFullYear()} Joshua Lin. All rights reserved.
+          © {new Date().getFullYear()} Joshua Lin. {t.contact.rights}
         </span>
         <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest flex items-center gap-2">
-          Designed with intention.
+          {t.contact.tagline}
           <span className="w-1.5 h-1.5 bg-primary block rounded-full"></span>
         </span>
       </div>

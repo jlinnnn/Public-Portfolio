@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { useLang } from '../i18n';
 
 export default function Hero() {
+  const { t } = useLang();
   const scrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -21,7 +23,7 @@ export default function Hero() {
           >
             <div className="flex items-center gap-4 mb-6">
               <span className="w-12 h-px bg-primary"></span>
-              <span className="font-mono text-sm tracking-widest text-primary uppercase">Portfolio</span>
+              <span className="font-mono text-sm tracking-widest text-primary uppercase">{t.hero.badge}</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-foreground leading-tight tracking-tight mb-4">
@@ -29,12 +31,12 @@ export default function Hero() {
             </h1>
 
             <h2 className="text-2xl md:text-3xl font-sans text-muted-foreground mb-10 max-w-2xl">
-              Data Analyst
+              {t.hero.title}
             </h2>
 
-            <div className="border-l border-border pl-6 max-w-xl">
+            <div className="border-s border-border ps-6 max-w-xl">
               <p className="text-lg md:text-xl font-mono text-foreground/80 leading-relaxed italic">
-                "Mathematician by foundation, data scientist by training, software developer by passion."
+                {t.hero.quote}
               </p>
             </div>
           </motion.div>
@@ -68,7 +70,7 @@ export default function Hero() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
         data-testid="button-scroll-down"
       >
-        <span className="font-mono text-xs uppercase tracking-widest">Scroll to explore</span>
+        <span className="font-mono text-xs uppercase tracking-widest">{t.hero.scroll}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}

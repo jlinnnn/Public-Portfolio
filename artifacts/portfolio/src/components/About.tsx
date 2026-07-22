@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useLang } from '../i18n';
 
 export default function About() {
+  const { t } = useLang();
   return (
     <section id="about" className="py-32 px-6 md:px-12 bg-secondary/30 relative">
       <div className="container mx-auto max-w-6xl">
@@ -38,33 +40,27 @@ export default function About() {
             <div>
               <div className="flex items-center gap-4 mb-4">
                 <span className="font-mono text-sm tracking-widest text-primary uppercase">01 //</span>
-                <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">About Me</h3>
+                <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">{t.about.badge}</h3>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif text-foreground font-bold mb-8">
-                Builder by reflex,<br />questioner by nature.
+                {t.about.heading}
               </h2>
             </div>
-            
+
             <div className="space-y-6 text-base md:text-lg text-foreground/80 font-sans leading-relaxed">
-              <p>
-                Engineer from New York. B.S. in Mathematics from NYU with a minor in Computer Science, and a recent M.S. in Data Science and Analytics from Georgetown University.
-              </p>
-              <p>
-                Curious about how AI, robotics, and space can make humanity's future more promising. I approach problems with the rigor of a mathematician and the pragmatism of an engineer.
-              </p>
-              <p>
-                Outside of work I'm an aspiring streetwear designer and indie game developer. In my free time you'll find me at the gym, in the kitchen, over a chessboard, or catching up with friends through the city.
-              </p>
+              <p>{t.about.p1}</p>
+              <p>{t.about.p2}</p>
+              <p>{t.about.p3}</p>
             </div>
 
             <div className="pt-8 border-t border-border flex gap-8 font-mono text-sm uppercase tracking-widest text-muted-foreground">
               <div className="flex flex-col gap-2">
-                <span className="text-primary">Location</span>
-                <span className="text-foreground">New York, NY</span>
+                <span className="text-primary">{t.about.locationLabel}</span>
+                <span className="text-foreground">{t.about.locationValue}</span>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-primary">Status</span>
-                <span className="text-foreground">Open to roles</span>
+                <span className="text-primary">{t.about.statusLabel}</span>
+                <span className="text-foreground">{t.about.statusValue}</span>
               </div>
             </div>
           </motion.div>

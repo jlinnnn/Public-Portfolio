@@ -1,37 +1,9 @@
 import { motion } from 'framer-motion';
-
-const SKILL_CATEGORIES = [
-  {
-    title: "Languages & Frameworks",
-    skills: ["Python (Pandas, NumPy)", "R (tidyverse, ggplot2)", "SQL", "JavaScript", "React", "Flask"]
-  },
-  {
-    title: "Machine Learning",
-    skills: ["Scikit-learn", "Classification (Naive Bayes, Random Forest)", "Clustering (K-Means, RFM)", "Recommendation Systems", "Regression", "Predictive Modeling"]
-  },
-  {
-    title: "Deep Learning & AI",
-    skills: ["TensorFlow / Keras", "Reinforcement Learning (DQN)", "Probabilistic Forecasting (DeepAR, GluonTS)", "LLMs (LLaMA 3.1, Ollama)", "Prompt Engineering"]
-  },
-  {
-    title: "NLP & Statistics",
-    skills: ["NLP", "Sentiment & Bias Analysis", "Time Series (Prophet)", "Hypothesis Testing", "Statistical Inference", "Geospatial Analysis"]
-  },
-  {
-    title: "Data & Infrastructure",
-    skills: ["MySQL", "MongoDB", "AWS", "REST APIs", "Data Wrangling", "Data Validation"]
-  },
-  {
-    title: "Visualization & Workflow",
-    skills: ["Plotly", "Matplotlib / Seaborn", "Streamlit", "Quarto", "Selenium", "Git / GitHub"]
-  },
-  {
-    title: "Foundations & Languages",
-    skills: ["Google Data Analytics (Certified)", "Mandarin (Fluent)", "Spanish (Beginner)"]
-  }
-];
+import { useLang } from '../i18n';
 
 export default function Skills() {
+  const { t } = useLang();
+  const SKILL_CATEGORIES = t.skills.categories;
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -58,10 +30,10 @@ export default function Skills() {
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="font-mono text-sm tracking-widest text-primary uppercase">02 //</span>
-            <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">Capabilities</h3>
+            <h3 className="font-sans text-xs uppercase tracking-widest text-muted-foreground">{t.skills.badge}</h3>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-foreground font-bold">
-            Technical Toolkit
+            {t.skills.heading}
           </h2>
         </motion.div>
 
