@@ -1,0 +1,19 @@
+# Netlify deploy config. This file is authoritative — it overrides any
+# framework auto-detection, so there is nothing to configure in the dashboard.
+
+[build]
+  # Run the build from the portfolio package (pnpm resolves the workspace root).
+  base = "artifacts/portfolio"
+  command = "pnpm build"
+  # Relative to `base` above -> artifacts/portfolio/dist/public
+  publish = "dist/public"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--version"
+
+# Single-page app: serve index.html for any path that isn't a real file.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
