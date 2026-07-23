@@ -153,7 +153,7 @@ export default function Projects() {
             <img
               src={featured.image}
               alt={tp.items[featured.id].title}
-              className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              className={`w-full h-full ${featured.image.endsWith('.gif') ? 'object-contain' : 'object-cover'} group-hover:scale-[1.02] transition-transform duration-700 ease-out`}
             />
             <div className="absolute top-4 right-4 z-20 flex items-center gap-2 bg-background/90 backdrop-blur px-3 py-1.5 border border-border">
               <span className={`w-2 h-2 rounded-full ${statusColor[featured.status] ?? 'bg-primary'}`}></span>

@@ -53,7 +53,7 @@ export default function Hero() {
               <img
                 src="/img/headshot.jpg"
                 alt="Joshua Lin"
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale contrast-110 filter group-hover:grayscale-0 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover object-center grayscale contrast-110 filter group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-primary"></div>
               <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-primary"></div>

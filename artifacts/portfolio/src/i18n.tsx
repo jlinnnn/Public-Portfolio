@@ -85,7 +85,7 @@ const en = {
     courseworkLabel: 'Coursework:',
     schools: {
       'Georgetown University': { degree: 'M.S. in Data Science and Analytics', highlights: ['GPA: 3.933 | Returning Student Scholarship Recipient', 'Teaching Assistant — DSAN Summer Bootcamp & Probabilistic Modeling', 'Teaching Assistant - DSAN 5100 Prob Modeling/Stat Computing', 'DSAN Graduate Peer Mentor'], coursework: 'Neural Networks & Deep Learning, Applied Time Series, Big Data & Cloud Computing, Data Visualization, Statistical Computing' },
-      'New York University': { degree: 'B.S. in Mathematics', minor: 'Minor in Computer Science', highlights: [], coursework: 'Probability, Combinatorics, Discrete Mathematics, Real Analysis, Data Structures' },
+      'New York University': { degree: 'B.S. in Mathematics', minor: 'Minor in Computer Science', highlights: ['Asian Cultural Union', 'Economics Society'], coursework: 'Probability, Combinatorics, Discrete Mathematics, Real Analysis, Data Structures' },
       'The Stony Brook School': { degree: 'High School Diploma', highlights: ['GPA: 3.85 / 4.0 — Honor & High Honor Roll', 'NYSSMA Level 6 — All-County Ensemble', 'All-County 1600M, Track & Field — Section XI'] },
     } as Record<string, { degree: string; minor?: string; highlights: string[]; coursework?: string }>,
   },
@@ -181,7 +181,7 @@ const zh: Dict = {
     courseworkLabel: '课程：',
     schools: {
       'Georgetown University': { degree: '数据科学与分析理学硕士', highlights: ['GPA：3.933 | 回归学生奖学金获得者', '助教 — DSAN 暑期训练营与概率建模', '助教 - DSAN 5100 概率建模／统计计算', 'DSAN 研究生同伴导师'], coursework: '神经网络与深度学习、应用时间序列、大数据与云计算、数据可视化、统计计算' },
-      'New York University': { degree: '数学理学学士', minor: '计算机科学辅修', highlights: [], coursework: '概率论、组合数学、离散数学、实分析、数据结构' },
+      'New York University': { degree: '数学理学学士', minor: '计算机科学辅修', highlights: ['亚洲文化联盟（Asian Cultural Union）', '经济学社（Economics Society）'], coursework: '概率论、组合数学、离散数学、实分析、数据结构' },
       'The Stony Brook School': { degree: '高中文凭', highlights: ['GPA：3.85 / 4.0 — 荣誉与高级荣誉榜', 'NYSSMA 六级 — 全县合奏团', '全县 1600 米，田径 — Section XI'] },
     },
   },
@@ -275,7 +275,7 @@ const es: Dict = {
     courseworkLabel: 'Asignaturas:',
     schools: {
       'Georgetown University': { degree: 'Maestría en Ciencia de Datos y Analítica', highlights: ['GPA: 3,933 | Becario Returning Student', 'Asistente de Cátedra — DSAN Summer Bootcamp y Modelado Probabilístico', 'Asistente de Cátedra - DSAN 5100 Modelado Prob./Computación Estadística', 'Mentor de Posgrado DSAN'], coursework: 'Redes Neuronales y Aprendizaje Profundo, Series Temporales Aplicadas, Big Data y Computación en la Nube, Visualización de Datos, Computación Estadística' },
-      'New York University': { degree: 'Licenciatura en Matemáticas', minor: 'Especialización secundaria en Informática', highlights: [], coursework: 'Probabilidad, Combinatoria, Matemática Discreta, Análisis Real, Estructuras de Datos' },
+      'New York University': { degree: 'Licenciatura en Matemáticas', minor: 'Especialización secundaria en Informática', highlights: ['Asian Cultural Union', 'Economics Society'], coursework: 'Probabilidad, Combinatoria, Matemática Discreta, Análisis Real, Estructuras de Datos' },
       'The Stony Brook School': { degree: 'Diploma de Bachillerato', highlights: ['GPA: 3,85 / 4,0 — Cuadro de Honor y Alto Honor', 'NYSSMA Nivel 6 — Conjunto del Condado', '1600 m del Condado, Atletismo — Section XI'] },
     },
   },
@@ -369,7 +369,7 @@ const fr: Dict = {
     courseworkLabel: 'Cours :',
     schools: {
       'Georgetown University': { degree: 'Master en Science des Données et Analytique', highlights: ['GPA : 3,933 | Boursier Returning Student', 'Assistant d\'Enseignement — DSAN Summer Bootcamp et Modélisation Probabiliste', 'Assistant d\'Enseignement - DSAN 5100 Modélisation Prob./Calcul Statistique', 'Mentor Pair de Cycle Supérieur DSAN'], coursework: 'Réseaux de Neurones et Apprentissage Profond, Séries Temporelles Appliquées, Big Data et Cloud Computing, Visualisation de Données, Calcul Statistique' },
-      'New York University': { degree: 'Licence en Mathématiques', minor: 'Mineure en Informatique', highlights: [], coursework: 'Probabilités, Combinatoire, Mathématiques Discrètes, Analyse Réelle, Structures de Données' },
+      'New York University': { degree: 'Licence en Mathématiques', minor: 'Mineure en Informatique', highlights: ['Asian Cultural Union', 'Economics Society'], coursework: 'Probabilités, Combinatoire, Mathématiques Discrètes, Analyse Réelle, Structures de Données' },
       'The Stony Brook School': { degree: 'Diplôme de Fin d\'Études Secondaires', highlights: ['GPA : 3,85 / 4,0 — Tableau d\'Honneur et Grand Honneur', 'NYSSMA Niveau 6 — Ensemble du Comté', '1600 m du Comté, Athlétisme — Section XI'] },
     },
   },
